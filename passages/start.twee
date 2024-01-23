@@ -1,0 +1,105 @@
+:: StoryData
+{
+    "ifid": "7C750031-DBD6-431B-B3FB-443FC0F0BBCE",
+    "format": "SugarCube",
+    "format-version": "2.36.1",
+    "start": "Start"
+}
+
+:: StoryInit
+<<set $finished_reading to false>><<set $show_pagination to false>>
+
+:: StoryTitle
+beneath the moon, before the steps
+
+:: PassageHeader
+<<if not tags().includes('etc')>><<if tags().includes('ends')>><<type 300ms>><h2>獨上江樓思渺然 月光如水水如天<br />同來望月人何處 風景依稀似去年</h2><</type>><<fadein 1.0s 2.0s>><<type 120ms>><h3>alone on a river tower, my thoughts full of sorrow.<br />moonlight like the water, the water like the sky<br />where is the person with whom i once shared the moon?<br />the view isn't quite the same as it was last year</h3><</type>><</fadein>><</if>><<if tags().includes('wenruo')>><<type 300ms>><h2>亭台上的花影一層又一層，<br />幾次叫僕人去清掃都掃不掉。</h2><</type>><<fadein 2.0s 0s>><h3>the flowers fall in layers upon the pavilion.<br />they cover the ground no matter how we try to sweep.</h3><br /><</fadein>><</if>><<if tags().includes('fengyue')>><<type 300ms>><h2>剛被太陽收拾去, 卻教明月送將來。</h2><</type>><<fadein 2.0s 0s>><h3>just as the sun takes the shadows of flowers away,<br />the full moon brings them back again.</h3><br /><</fadein>><</if>><</if>>
+
+:: Start [mainmenu etc]
+
+<h1><<fadein 1.5s 1.0s>>beneath the moon,<</fadein>>
+<<fadein 1.5s 1.5s>>before the steps<</fadein>>
+<<fadein 1.5s 2.0s>><hr /><</fadein>></h1><<fadein 1.5s 4.0s>>"beneath the moon, before the steps" is a thread written between <<linkreplace "sas">>you<</linkreplace>> and <<linkreplace "nhi">>me<</linkreplace>>.
+it was originally written on <<linkreplace "natura">>natura (smokes my cigarette: wow haven't heard that name in a long time...)<</linkreplace>> in 2021. there are some references to natura-specific lore. both fengyue and wenruo's surnames are different from what they are now.
+
+[[about|About]]
+[[read|Page1]]
+[[card|Card]]
+<</fadein>>
+
+:: PassageFooter
+<<if not tags().includes('mainmenu') and not tags().includes('etc')>>
+
+
+<<nobr>><<widget "pagination">><<set $previouslink to setup.previouspage()>><<set $nextlink to setup.nextpage()>><div style="text-align:center;">[[⇦|$previouslink]] [[Menu]] [[⇨|$nextlink]]</div><</widget>><</nobr>>
+<<nobr>><<if $show_pagination is true>><<pagination>><<else>>[[Menu]]<</if>><</nobr>><</if>>
+
+:: Menu [etc]
+You can choose to <<link "save or load">><<run UI.saves()>><</link>> your progress here.
+You can also set whether or not you want a paged menu to appear as well.
+
+<<if $finished_reading is false>><strong>Note:</strong> Since you haven't finished reading, it's suggested you keep pagination off. You may still turn it on if you find it useful.<</if>>
+
+Show pagination is currently set to $show_pagination. <<if $show_pagination is true>> <span id="page_off"><<link "Turn it off?">></span><<replace "#page_off" t8n>><<set $show_pagination to false>>Turned pagination off.<</replace>><</link>> <<else>> <span id="page_on"><<link "Turn it on?">></span><<replace "#page_on" t8n>><<set $show_pagination to true>>Turned pagination on.<</replace>><</link>><</if>>
+
+<<return "Return to page?">>
+<<linkreplace "Return to Main Menu?">>[[Return to Main Menu?|Start]] Note: This will reset reading progress, so remember to save your progress first, and load it later.<</linkreplace>>
+
+:: About [etc]
+
+I just wanted to give you a little you and a little me in this present!
+It wouldn't be here without writing with you, as would so many other things we've shared together.
+
+I've written more about this in your [[birthday card|Card]], but you won't be able to read it till you've read the story! :D
+
+[[Here|https://nnguyenrh.github.io/sas/]] is a link to last year's game if you wanna reminisce.
+
+[[Return?|Start]]
+
+:: Card [etc]
+<<if $finished_reading is false>>You'll be able to read your special card once you've passed through the thread. :)
+
+[[Return?|Start]]<<else>>
+
+<h1>hewwo :3</h1>
+Hi baby!
+
+Predictably, I have prepared for you another twine for our friend day… Truly, I think hard over and put my whole little heart into making these, but I can’t help but feel like I’ve copped out by gifting another one for you, like I'm a one-trick pony...
+
+But I think I have a good reason for them, especially this year. I remember you’ve been really anxious about not being able to write recently, like you’ve been stopped up. I also know you’ve said that it feels like you might not be able to write again ever.
+
+I really mean it when art block like this eventually goes away. I’ve told you a hundred times, but I had an art block that lasted a long time once, about a few years, when my relationship with art was really unhealthy, as well as my relationship with myself.
+
+The reason why it took years to work through was mostly because I was trying to pull through it alone. This was partly my fault. I didn’t really share my art with anyone, and I didn’t have an artistic community or even friends to talk to about it. Luckily, things got better as I finished university and found myself in a better place than before. But if I had some more support and encouragement, I would have returned to drawing a lot sooner than that, and with a healthier mindset as well.
+
+So in light of this realization, I wanted to gift you some things that might help you work through your writer’s block.
+
+First is one of our favorite threads in twine form, and second is Clarice Lispector’s complete cronicas collection (the latter of which is coming late. :( But most definitely coming, thanks to Kai and Alice's help!!!) in print form, because it just feels more special to have a print book than an eBook, I think!
+
+I don’t know how long it’ll be before you find that you can write again.
+
+I just want you to know that it won’t be never, and that regardless of where we are in our lives, that I’ll always want to write with you, and your writing is just so important to me.
+
+There’s nothing else out there quite like writing with you, except maybe reading from you. Otherwise, everything else is a distant second, if it were even a comparable experience.
+
+[[Why this thread for this Twine, though?|Card2]]
+
+<</if>>
+
+:: Card2 [etc]
+
+<h2>about this one</h2>It's very cheesy, but in the weeks leading up to today, I was having a really hard time sleeping. But somehow, I remembered this thread without looking it up, and while I was remembering it, I suddenly fell asleep, and very soundly at that. So the next morning, I decided I'd turn the thread into a Twine game for you, as a gift.
+
+I'm not sure why, but I cried several times putting this together, too. Not for any reason in particular. I tried to recreate how gentle this was, and I think I did an all right job of it.
+
+I don’t really know how to describe the significance of the threads we wrote between Fengyue and Wenruo, because it would sound unbelievable. I’m sure it’s the same for you.
+
+In my case, I mean it when I say I think about them daily, regardless of how much time has passed since we’ve written them. I'm not even saying it to be nice or to exaggerate. It might be that I remember something we wrote some time ago, or something you said. Or maybe I will think about where they are in their relationship and try to figure out why. Sometimes I will even learn something new. It's a little embarrassing to say, but every day, I really do think about them both, and I think I might forever.
+
+Which makes them feel more precious and fragile, because we wouldn’t have written them if we had not joined Natura together.
+
+Yet at the same time, I think we would have written them in a different way, under different circumstances. And they would then occupy my mind in exactly the same way. That’s just how it is when I write with you.
+
+I don’t think there’s anyone or anything in the world that can replicate that feeling for me, so I am perfectly content with waiting around for you to write with me again. Until we’re both up for it, I’ll just try to find a way to remind you of that and of all the things you’ve written before, as well as all the things you’ll write in the future that I’ll both be excited to read and extremely flattered to write with you.
+
+[[Return?|Start]]
